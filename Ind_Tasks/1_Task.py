@@ -8,6 +8,7 @@ if __name__ == '__main__':
     count = 1
     end_index = 0
     pred = ''
+
     for i, word in enumerate(s):
         if s[i] == pred:
             pred = s[i]

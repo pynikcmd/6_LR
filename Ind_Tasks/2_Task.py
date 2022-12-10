@@ -6,6 +6,7 @@ if __name__ == '__main__':
     s = text.split(".")
     count = 0
     flag = True
+
     for i, word in enumerate(s):
         count = word.count('и')
         if word.count('и') == 0:
