@@ -8,17 +8,20 @@ if __name__ == '__main__':
     count = 1
     end_index = 0
     pred = ''
+    flag = False
 
-    for i, word in enumerate(s):
-        if s[i] == pred:
-            pred = s[i]
+    for i in s:
+        if i == pred:
+            pred = i
             count += 1
             if count == 5:
                 print("Да, верно")
-                break
-        if s[i] != pred:
-            pred = s[i]
+                flag = True
+        if i != pred:
+            pred = i
             count = 1
-        end_index = i
-    if (end_index+1) == len(s):
+        if flag:
+            break
+
+    if not flag:
         print("Не верно")
